@@ -1,0 +1,27 @@
+<div class="container reservations-new">
+  <div class="row">
+    <div class="reservations-new-area">
+      <div class="reservations-new-nav">
+        <h4 class="reservations-new-check-content">予約内容確認</h4>
+        <h5 class="price-icon"><%= "#{@room.price} / 日" %></h5>
+        <div class="reservations-new-date-select">
+          <%= form_with model: @reservation do |f| %>
+            <%= f.label "開始日" %>
+            <%= f.text_field :start_date, readonly: true, class: "form-control" %>
+            <%= f.label "終了日" %>
+            <%= f.text_field :end_date, readonly: true, class: "form-control" %>
+            <h6 class="reservations-new-check-content"><%= "使用日数：#{stay_days(@reservation.start_date, @reservation.end_date)}日" %></h6>
+            <h6 class="reservations-new-check-content"><%= "人数：#{@reservation.peoples}人" %></h6>
+            <%= f.hidden_field :peoples %>
+            <%= f.label "合計金額" %>
+            <%= f.text_field :total_amount, value: total_charge(@reservation.peoples, stay_days(@reservation.start_date, @reservation.end_date), @room.price), readonly: true, class: "form-control" %>
+            <%= f.hidden_field :room_id, value: @room.id %>
+            <p class="reservations-new-check-content">上記内容でよろしければ「予約を確定」を押してください</p>
+            <%= f.submit "予約を確定", class: "btn btn-primary form-control" %>
+            <%= link_to "ルーム詳細に戻る", @room, class: "btn btn-secondary form-control", data: {"turbolinks" => false} %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

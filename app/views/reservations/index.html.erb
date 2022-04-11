@@ -1,0 +1,29 @@
+<div class="container-fiuld reservations">
+  <h4>予約済みルーム一覧</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>ルーム画像</th>
+        <th>ルーム名</th>
+        <th>ルーム紹介</th>
+        <th>合計料金</th>
+        <th>開始日</th>
+        <th>終了日</th>
+        <th>予約確定日時</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @reservations.each do |reservation| %>
+        <tr>
+          <td><%= link_to image_tag("/uploads/room/image/#{reservation.room.id}/#{reservation.room.image_name}", class: "reservations-image"), reservation.room, data: {"turbolinks" => false} %></td>
+          <td class="posts-name"><%= link_to reservation.room.name, reservation.room, data: {"turbolinks" => false} %></td>
+          <td class="posts-introduce"><%= reservation.room.introduce %></td>
+          <td class="price-icon"><%= total_charge(reservation.peoples, stay_days(reservation.start_date, reservation.end_date), reservation.room.price) %></td>
+          <td><%= reservation.start_date %></td>
+          <td><%= reservation.end_date %></td>
+          <td><%= reservation.created_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -38,3 +38,16 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# プロファイル画像フォルダ配下を除外する.
+/public/uploads/user/image/*
+
+# プロファイルのデフォルト画像は除外しない.
+!/public/uploads/user/image/default_icon.jpeg
+
+# ルーム画像フォルダ配下を除外する.
+/public/uploads/room/image/*
+
+# ルーム画像フォルダを除外させない.(空フォルダをキープする)
+!/public/uploads/room/.keep
+!/public/uploads/room/image/.keep

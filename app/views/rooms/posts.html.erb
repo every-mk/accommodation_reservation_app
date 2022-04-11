@@ -1,0 +1,25 @@
+<div class="container-fuild room-posts">
+  <h4>登録済みルーム一覧</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>ルーム画像</th>
+        <th>ルーム名</th>
+        <th>ルーム紹介</th>
+        <th>料金</th>
+        <th>作成日</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% current_user.room.each do |room| %>
+        <tr>
+          <td><%= link_to image_tag("/uploads/room/image/#{room.id}/#{room.image_name}", alt: "部屋画像", class: "room-posts-image"), room, data: {"turbolinks" => false} %></td>
+          <td class="posts-name"><%= link_to room.name, room, data: {"turbolinks" => false} %></td>
+          <td class="posts-content"><%= room.introduce %></td>
+          <td class="price-icon"><%= room.price %></td>
+          <td><%= room.created_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,67 @@
+<div class="container-fiuld user profile">
+  <div class="row">
+    <div class="user-nav user-nav-pc">
+      <ul>
+        <li>
+          <%= link_to "アカウント", users_account_path, data: {"turbolinks" => false} %>
+        </li>
+        <li class="active">
+          <%= link_to "プロフィール", profile_path, data: {"turbolinks" => false} %>
+        </li>
+      </ul>
+    </div>
+    <div class="user-nav user-nav-mobile">
+      <ul>
+        <li>
+          <%= link_to "アカウント", users_account_path, data: {"turbolinks" => false} %>
+        </li>
+        <li class="active">
+          <%= link_to "プロフィール", profile_path, data: {"turbolinks" => false} %>
+        </li>
+      </ul>
+    </div>
+    <div class="user-view">
+      <div class="user-view-box">
+        <div class="update-content">
+          <div class="row">
+            <p>プロフィール</p>
+          </div>
+        </div>
+        <%= form_with model: current_user.profile do |f| %>
+          <div class="update-content">
+            <div class="row">
+              <div class="offset">
+                <div class="icon-box">
+                  <%= image_tag "/uploads/user/image/#{current_user.id}/#{current_user.profile.image_name}", alt: "アイコン画像", class: "icon-image host-icon" %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <%= f.label "アイコン画像", class: "required-a" %>
+              <%= f.file_field :icon_image, required: true, class: "input-w" %>
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <%= f.label "名前", class: "required-a" %>
+              <%= f.text_field :name, placeholder: "名前を入力", autocomplete: "name", required: true, class: "form-control input-w" %>
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <%= f.label "自己紹介", class: "required-a" %>
+              <%= f.text_area :introduce, placeholder: "自己紹介を入力", required: true, class: "form-control input-w" %>
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <%= f.submit "更新", class: "btn btn-primary" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

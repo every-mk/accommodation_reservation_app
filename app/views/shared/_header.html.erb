@@ -1,0 +1,34 @@
+<header>
+  <div class="header-left-nav">
+    <%= link_to image_tag("https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png", alt: "サイトのロゴ画像"), root_path, data: {"turbolinks" => false} %>
+    <%= form_with url: rooms_search_path, method: :get do |f| %>
+      <div class="header-sharch">
+        <i class="bi bi-geo-alt-fill"></i>
+        <%= f.text_field :area, placeholder: "エリア", class: "form-control" %>
+      </div>
+      <div class="header-sharch">
+        <i class="bi bi-search"></i>
+        <%= f.text_field :keyword, placeholder: "キーワード", class: "form-control" %>
+      </div>
+      <%= f.submit "", class: "display-none" %>
+    <% end %>
+  </div>
+  <div class="header-right-nav">
+    <% if user_signed_in? %>
+      <div class="nav-item"><%= current_user.profile.name %></div>
+      <div class="nav-item">
+        <%= image_tag "/uploads/user/image/#{current_user.id}/#{current_user.profile.image_name}", alt: "メニュー", class: "host-icon" %>
+        <ul class="header-nav-menu display-none">
+          <li><%= link_to "ルーム登録", new_room_path, data: {"turbolinks" => false} %></li>
+          <li><%= link_to "予約済みルーム一覧", reservations_path, data: {"turbolinks" => false} %></li>
+          <li><%= link_to "登録済みルーム一覧", rooms_posts_path, data: {"turbolinks" => false} %></li>
+          <li><%= link_to "設定", users_account_path, data: {"turbolinks" => false} %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: {"turbolinks" => false} %></li>
+        </ul> 
+      </div>   
+    <% else %>
+      <%= link_to "ログイン", new_user_session_path, class: "btn btn-primary", data: {"turbolinks" => false} %>
+      <%= link_to "登録する", new_user_registration_path, class: "btn btn-secondary", data: {"turbolinks" => false} %>
+    <% end %>
+  </div>
+</header>
