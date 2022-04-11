@@ -47,3 +47,6 @@ yarn-debug.log*
 
 # ルーム画像フォルダ配下を除外する.
 /public/uploads/room/image/
+
+# ルーム画像フォルダを除外させない.(空フォルダをキープする)
+!/public/uploads/room/image/.gitkeep
