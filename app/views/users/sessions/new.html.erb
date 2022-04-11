@@ -1,0 +1,24 @@
+<div class="container device">
+  <div class="device-frame">
+    <p>ログイン</p>
+    <div class="device-inner">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <div class="required"></div>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "form-control" %>
+        </div>
+
+        <div class="field">
+          <div class="required"></div>
+          <%= f.password_field :password, autocomplete: "current-password", placeholder: "パスワード", class: "form-control" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "ログイン", class: "form-control btn-primary" %>
+        </div>
+      <% end %>
+
+      <%= render "users/shared/links" %>
+    </div>
+  </div>
+</div>

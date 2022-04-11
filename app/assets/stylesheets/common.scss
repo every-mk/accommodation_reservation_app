@@ -1,0 +1,204 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body, header, footer, div, img, input, i, a, h2, ul, p, form, h1, h4, h5, h6
+ {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+a {
+  text-decoration: none;      /* 下線なし */
+  color: black;
+}
+
+ul {
+  list-style: none;           /* ・なし */
+}
+
+h4, h5, h6 {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: center;
+}
+
+td {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+body {
+  position: relative;         /* footer用の基準位置 */
+  padding-bottom: 180px;      /* footerのheight分の領域を確保する. */
+  min-height: 100vh;          /* viewが画面内に収まる場合は画面下にfooterを表示する. */
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+.display-none {
+ display: none;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.form-control:focus {
+  background-color: white;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25)
+}
+
+.form-control[readonly] {
+  background-color: #e9eced;
+  opacity: 1;
+}
+
+textarea.form-control {
+  height: 134px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 5px 12px;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+.btn-primary {
+  background-color: #4a90e2;
+  border-color: #007bff;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-outline-secondary {
+  border-color: #6c757d;
+}
+
+.required {
+  position: relative;
+  width: 100%;
+  padding: 0.5rem 5px 0 5px;
+  flex: 0 0 16.67%;
+  max-width: 16.67%;
+}
+
+.required::before {
+  margin: 0 5px;
+  padding: 4px;
+  background-color: #ff0000a8;
+  border-radius: 5px;
+  content: "必須";
+  font-size: 12px;
+  color: white;
+}
+
+.required-a {
+  position: relative;
+  width: 100%;
+  padding: 0.5rem 5px 0 5px;
+  // flex: 0 0 16.67%;
+  // max-width: 16.67%;
+}
+
+.required-a::after {
+  margin: 0 5px;
+  padding: 4px;
+  background-color: #ff0000a8;
+  border-radius: 5px;
+  content: "必須";
+  font-size: 12px;
+  color: white;
+}
+
+[type=submit]:not(disabled) {
+  cursor: pointer;
+}
+
+.flash {
+  text-align: center;
+  font-size: 13px;
+  color: white;
+}
+
+.flash p {
+  position: relative;
+  margin-bottom: 16px;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.flash_notice {
+  background-color: lightBlue;
+}
+
+.flash_notice_green {
+  margin-bottom: 16px;
+  font-size: 13px;
+  line-height: 18px;
+  color: green;
+}
+
+.alert {
+  margin-bottom: 16px;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.flash_alert {
+  background-color: #f35500;
+  text-align: center;
+  font-size: 13px;
+  color: white;
+}

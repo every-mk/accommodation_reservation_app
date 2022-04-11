@@ -1,0 +1,72 @@
+.user .offset {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.user .icon-box {
+
+  text-align: center;
+}
+
+.user .host-icon {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.input-w {
+  margin-bottom: 24px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.profile label {
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+// .profile #profile_icon_image {
+//   padding: 0 15px;
+//   font-size: 15px;
+//   line-height: 17px;
+// }
+
+.profile [type=file] {
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.profile [type=submit] {
+  width: 100%;
+  font-size: 16px;
+}
+
+.profile .required-a {
+  padding: 0 15px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px)
+{
+  .user .offset {
+    margin-left: 25%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .input-w {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+}
+
+@media screen and (min-width: 992px)
+{
+  .profile .user-view {
+    flex: 0 0 83.33%;
+    max-width: 83.33%;
+  }
+}

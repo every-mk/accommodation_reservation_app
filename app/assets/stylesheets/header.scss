@@ -1,0 +1,94 @@
+header {
+  width: 100%;
+  height: 70px;
+  padding: 4px 30px;
+  background-color: black;
+}
+
+.header-left-nav {
+  float: left;
+}
+
+.header-left-nav form {
+  display: inline-block;       /* imgの右側へ移動 */
+}
+
+.header-sharch {
+  display: inline-block;       /* インプットボックスを横並びにする. */
+  position: relative;          /* 基準となる位置を決定 */
+}
+
+.header-left-nav .form-control {
+  width: 180px;
+  display: inline-block;    
+  padding: 6px 12px 6px 30px;
+}
+
+header i {
+  display: inline-block;
+  position: absolute;           /* 要素を基準となる位置から移動する. */
+  top: 5px;
+  left: 8px;
+  font-size: 18px;
+}
+
+.header-right-nav {
+  float: right;
+}
+
+.header-right-nav .btn {
+  margin-top: 10px;
+  color: white;
+}
+
+.header-right-nav .btn-primary {
+  margin-right: 12px;
+}
+
+.header-right-nav .nav-item {
+  display: inline-block;          /* 横並び */
+  font-size: 14px;
+  color: white;
+}
+
+.header-right-nav .nav-item:first-child {
+  display: none;
+}
+
+header .host-icon {
+  margin: 0 16px;
+  padding: 4px;
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.header-nav-menu {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  padding: 15px;
+  background-color: white;
+  border: 3px solid #f6f8f9;
+  z-index: 10;
+}
+
+.header-nav-menu li {
+  padding: 3px 5px;
+  line-height: 30px;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 576px)
+{
+  .header-right-nav .nav-item:first-child {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header-left-nav form {
+    display: none;
+  }
+}

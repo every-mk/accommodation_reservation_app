@@ -1,0 +1,258 @@
+.device {
+  padding-top: 36px;
+  font-size: 16px;
+}
+
+.device-frame {
+  margin: 0 auto;
+  padding: 24px;
+  max-width: 600px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 1px 3px 0px rgba(21, 27, 38, 0.15);
+}
+
+.device-frame h1 {
+  margin-bottom: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.device-frame p {
+  margin: 24px 0;
+  font-size: 16px;
+}
+
+.device-inner {
+  margin: 0 auto;
+  width: 360px;
+}
+
+#error_explanation {
+  margin-bottom: 20px;
+  padding: 7px 7px 0;
+  width: 450px;
+  background-color: #f0f0f0;
+  border: 2px solid red;
+}
+
+#error_explanation h2 {
+  margin: -7px -7px 0;
+  padding: 5px 5px 5px 15px;
+  background-color: #c00;
+  text-align: left;
+  line-height: 1.2;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+#error_explanation ul {
+  list-style: disc;
+  padding-left: 40px;
+  margin-bottom: 1rem;
+  line-height: 18px;
+  font-size: 13px;
+}
+
+#error_explanation ul li {
+  list-style: square;
+  font-size: 12px;
+}
+
+.device .field {
+  margin-bottom: 10px;
+}
+
+.device .field {
+  display: flex;
+  margin: 0 -5px 10px -5px;
+}
+
+.field_with_errors {
+  padding: 2px;
+  padding-right: 34px;
+  width: 214px;
+  background-color: red;
+}
+
+.device .actions {
+  margin: 24px 0;
+}
+
+.device a {
+  color: #007bff;
+}
+
+.user {
+  width: 100%;
+}
+
+.user .user-nav {
+  padding: 30px 15px;
+  width: 100%;
+}
+
+.user .user-nav-pc {
+  height: 100vh;
+}
+
+.user ul {
+  margin-left: 40px;
+  line-height: 18px;
+}
+
+.user ul li {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.user .user-nav-pc {
+  display: none;
+}
+
+.user .user-nav-pc .active {
+  border-right: 3px solid #4a90e2;
+}
+
+.user .user-nav-pc .active a {
+  color: #4a90e2;
+}
+
+.user .user-view {
+  width: 100%;
+  padding: 0 15px;
+  background-color: #f6f8f9;
+  border-left: 2px solid #e2e2e2;
+}
+
+.user .user-view-box {
+  margin: 30px auto;
+  max-width: 880px;
+  border: 1px solid #eaedef;
+  background-color: white;
+}
+
+.user .update-content {
+  margin: 0 15px;
+  padding: 20px;
+  border-bottom: 1px solid #eaedef;
+  font-size: 16px;
+}
+
+.user .row p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  border-bottom: 8px;
+}
+
+.account .required-a {
+  flex: 0 0 16.67%;
+  max-width: 16.67%;
+}
+
+.user .update-content label {
+  font-weight: bold;
+}
+
+.account .update-content .row div {
+  padding: 0 15px;
+  width: 100%;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+.user .update-content .row a {
+  width: 100%;
+}
+
+.user .user-nav-mobile {
+  height: auto;
+}
+
+.user .user-nav-mobile ul li {
+  float: left;
+}
+
+.user .user-nav-mobile ul li a:hover {
+  color: #4a90e2;
+}
+
+.user .user-nav-mobile .active {
+  border-bottom: 3px solid #4a90e2;
+}
+
+.user .user-nav-mobile .active a {
+  color: #4a90e2;
+}
+
+.account-edit .field {
+  margin: 0 0 10px;
+  display: block;
+}
+
+.account-edit .form-group {
+  margin-bottom: 5px;
+}
+
+.account-edit label {
+  font-size: 16px;
+}
+
+.account-edit .form-group {
+  width: 100%;
+}
+
+.account-edit .actions {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px)
+{
+  .account .user-view {
+    flex: 0 0 83.33%;
+    max-width: 83.33%;
+  }
+
+  .user .update-content label {
+    padding: 0 15px;
+    max-width: 25%;  
+    width: 100%;
+    flex: 0 0 25%;
+    font-size: 16px;
+  }
+
+  .account .update-content .row div {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .user {
+   .update-content .row a, [type=submit] {
+      margin: 0 16px;
+      flex: 0 0 16.67%;
+      max-width: 16.67%;
+   }
+  }
+
+  .account-edit .actions [type=submit] {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px)
+{
+  .user-nav {
+    flex: 0 0 16.67%;
+    max-width: 16.67%;
+  }
+
+  .user .user-nav-pc {
+    display: block;
+  }
+
+  .user .user-nav-mobile {
+    display: none;
+  }
+}

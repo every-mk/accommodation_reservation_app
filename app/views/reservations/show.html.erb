@@ -1,0 +1,32 @@
+<div class="container-fiuld reservations-show user">
+  <div class="row">
+    <div class="user-view">
+      <div class="user-view-box">
+        <div class="update-content">
+          <div class="row">
+            <label>予約した部屋</label>
+            <div><%= link_to @reservation.room.name, room_path, data: {"turbolinks" => false} %></div>
+          </div>
+        </div>
+        <div class="update-content">
+          <div class="row">
+            <label>開始日</label>
+            <div><%= @reservation.start_date %></div>
+          </div>
+        </div>
+        <div class="update-content">
+          <div class="row">
+            <label>終了日</label>
+            <div><%= @reservation.end_date %></div>
+          </div>
+        </div>
+        <div class="update-content">
+          <div class="row">
+            <label>価格</label>
+            <div><%= "#{@reservation.room.price}円" %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

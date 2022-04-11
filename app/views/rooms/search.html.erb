@@ -1,0 +1,21 @@
+<div class="container-fiuld room-search">
+  <h4><%= "検索結果：#{@rooms.count}件" %></h4>
+  <div class="row">
+    <% @rooms.each do |room| %>
+      <div class="room-search-area">
+        <div class="room-search-frame-inner">
+          <%= link_to room, data: {"turbolinks" => false} do %>
+            <div class="room-image-out">
+              <%= image_tag "/uploads/room/image/#{room.id}/#{room.image_name}", alt: "部屋画像", class: "room-image" %>
+            </div>
+          <% end %>
+          <div class="room-profile">
+            <p class="room-profile-name"><%= room.name %></p>
+            <p class="room-profile-address"><%= room.address %></p>
+            <p class="room-profile-price price-icon"><%= room.price %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
